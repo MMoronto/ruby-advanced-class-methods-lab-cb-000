@@ -30,10 +30,8 @@ class Song
       if c 
         c   
       else 
-        song = self.new
-        song.name = string
-        @@all << song
-        song 
+        self.create_by_name(string)
+        song = self.new 
       end
   end 
   
