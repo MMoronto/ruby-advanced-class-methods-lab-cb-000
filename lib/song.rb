@@ -26,13 +26,10 @@ class Song
   end 
   
    def self.find_or_create_by_name(string)
-    if song 
-      @@all.find{|song| song.name == string}
-    else
+      @@all.find{|song| song.name == string} ||
       song = self.new
       song.name = string
       song
-    end 
   end 
   
   def self.alphabetical
