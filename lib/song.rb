@@ -26,7 +26,7 @@ class Song
   end 
   
    def self.find_or_create_by_name(string)
-      @@all.find{|song| song.name == string} ||
+      match = @@all.find{|song| song.name == string} ||
       song = self.new
       song.name = string
       song
