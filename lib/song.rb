@@ -32,7 +32,8 @@ class Song
       else 
         song = self.new
         song.name = string
-        song
+        @@all << song
+        song 
       end
   end 
   
