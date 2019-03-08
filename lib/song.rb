@@ -46,6 +46,17 @@ class Song
     song.artist_name = artist_name
     song
   end 
+  
+   def self.create_from_filename(data)
+    data = data.split(" - ")
+    artist_name = data[0]
+    name = data[1].chomp(".mp3")
+    song = self.new
+    song.name = name
+    song.artist_name = artist_name
+    @@all << song
+     song
+  end
 
   def self.all
     @@all
