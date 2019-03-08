@@ -31,7 +31,6 @@ class Song
         c   
       else 
         self.create_by_name(string)
-        song = self.new 
       end
   end 
   
