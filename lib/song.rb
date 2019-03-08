@@ -27,7 +27,7 @@ class Song
   
    def self.find_or_create_by_name(string)
       @@all.find{|song| song.name == string}
-      if mmatch
+      if match
         string 
       else 
         song = self.new
