@@ -37,19 +37,14 @@ class Song
     @@all.sort_by{|song| song.name}
   end 
   
-  def self.new_from_filename(string)
-    rows = string.split(".mp3")
-    songs = rows.collect do |row|
-    data = row.split(", ")
-    name = data[0]
-    artist_name = data[1]
-
+  def self.new_from_filename(data)
+    data = data.split(" - ")
+    artist_name = data[0]
+    name = data[1].chomp(".mp3")
     song = self.new
     song.name = name
     song.artist_name = artist_name
     song
-    end
-    songs
   end 
 
   def self.all
